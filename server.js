@@ -7,10 +7,9 @@ require("dotenv").config({path : "config/.env"});
 require("./config/database");
 const {checkUser} = require("./middleware/auth.middleware.js");
 const {requireAuth} = require("./middleware/auth.middleware.js");
-const port = 3000;
+const port = process.env.port || 3000;
 const app = express();
 const cors = require("cors");
-
 
 
 //middleware 
@@ -39,6 +38,9 @@ app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'))
+}
 
 // server
 app.listen(port, () => {
