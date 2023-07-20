@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { UidContext } from "../components/AppContext";
 import SignUpForm from "../components/Log/SignUpForm";
-import "../styes/pages/inscription.css"
+import "../styles/pages/inscription.css"
 
 
 function Registration() {

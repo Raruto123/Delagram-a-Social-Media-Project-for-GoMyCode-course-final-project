@@ -7,8 +7,8 @@ import FriendsHint from "../components/Profil/FriendsHint";
 import LeftNav from "../components/LeftNav";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styes/pages/accueil.css"
-import "../styes/components/leftnav.css"
+import "../styles/pages/accueil.css"
+import "../styles/components/leftnav.css"
 
 
 function Accueil() {

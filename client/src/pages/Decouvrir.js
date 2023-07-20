@@ -8,8 +8,8 @@ import Thread from "../components/Thread";
 // import Trends from "../components/Trends";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styes/pages/decouvrir.css"
-import "../styes/components/leftnav.css"
+import "../styles/pages/decouvrir.css"
+import "../styles/components/leftnav.css"
 
 
 function Decouvrir() {

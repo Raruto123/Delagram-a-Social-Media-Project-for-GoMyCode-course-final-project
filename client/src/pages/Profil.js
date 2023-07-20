@@ -3,8 +3,8 @@ import { UidContext } from "../components/AppContext";
 import { useContext } from "react";
 import UpdateProfil from "../components/Profil/UpdateProfil";
 import LeftNav from "../components/LeftNav";
-import "../styes/pages/profil.css"
-import "../styes/components/leftnav.css"
+import "../styles/pages/profil.css"
+import "../styles/components/leftnav.css"
 
 
 

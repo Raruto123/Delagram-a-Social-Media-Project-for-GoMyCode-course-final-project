@@ -9,7 +9,7 @@ function LeftNav() {
                 <div className="icons-bis">
                     <NavLink to="/accueil">
                         <div className="left-nav-logo-container">
-                        <img src="./img/Capture d’écran 2023-07-17 à 16.38.21.png" alt="delagram-logo"></img>
+                        <img src="./img/logo.png" alt="delagram-logo"></img>
                         <img src="./img/icons/delagram-icon2.png" alt="delagram-logo-mobile"></img>
                         </div>
                     </NavLink>

@@ -4,8 +4,8 @@ import LeftNav from "../components/LeftNav"
 import NewPostForm from "../components/Post/NewPostForm";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styes/pages/creer.css"
-import "../styes/components/leftnav.css"
+import "../styles/pages/creer.css"
+import "../styles/components/leftnav.css"
 
 
 function Create() {
