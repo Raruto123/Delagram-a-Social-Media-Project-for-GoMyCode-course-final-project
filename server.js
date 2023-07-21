@@ -7,17 +7,25 @@ require("dotenv").config({path : "config/.env"});
 require("./config/database");
 const {checkUser} = require("./middleware/auth.middleware.js");
 const {requireAuth} = require("./middleware/auth.middleware.js");
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const cors = require("cors");
+// import fkill from "fkill";
 
+// fkill(':5000');
+
+//heroku choisis de lire Procfile et sinon le npm start de ton package.json
+//heroku local pour tester en local avant de le push
+    // "build": "cd client && npm run build",
+    // "install-client": "cd client && npm install",
+    // "heroku-postbuild": "npm run install-client && npm run build"
 
 //middleware 
 app.use(bodyParser.json());//pour lire les req.body
 app.use(bodyParser.urlencoded({extended : true}));//req.params
 app.use(cookieParser()); //req.cookies
 const corsOptions = {
-    origin : "http://localhost:3001",
+    origin : ["http://localhost:3001", "https://delagram-app-the-real.onrender.com"],
     credentials : true,
     "allowedHeaders" : ["sessionId", "Content-Type"],
     "exposedHeaders" : ["sessionId"],
@@ -38,11 +46,11 @@ app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static('client/build'))
-}
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static('client/build'))
+// }
 
 // server
 app.listen(port, () => {
-    console.log("serveur a commencé sur port : ", port);
+    console.log(`serveur a commencé sur port : ${port}`);
 })
